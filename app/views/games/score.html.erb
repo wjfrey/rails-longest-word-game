@@ -1,0 +1,13 @@
+<h1>Result</h1>
+<% if @answer == 'array_missmatch' %>
+  <div>
+    <p>Sorry, but <%= @word %> can't be built out of <%= @letters %></p>
+  </div>
+<% elsif @answer == 'valid_english_word' %>
+  <div>
+    <p>Congratulations! <%= @word %> is a valid English word!</p>
+    <p>You made <%= @current_score %> points! Your new total score is <%= session[:score] %></p>
+  </div>
+<% else %>
+  <p>Sorry, but <%= @word %> is not a valid English word!</p>
+<% end %>
